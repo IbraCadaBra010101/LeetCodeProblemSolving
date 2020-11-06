@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\46790\\Desktop\\LeetCodeProblems\\LeetCodeProblems\\LeetCodeProblems.csproj": {}
+    "C:\\Users\\46790\\Desktop\\LeetCodeProblems\\RemoveVowel\\RemoveVowel.csproj": {}
   },
   "projects": {
-    "C:\\Users\\46790\\Desktop\\LeetCodeProblems\\LeetCodeProblems\\LeetCodeProblems.csproj": {
+    "C:\\Users\\46790\\Desktop\\LeetCodeProblems\\RemoveVowel\\RemoveVowel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\46790\\Desktop\\LeetCodeProblems\\LeetCodeProblems\\LeetCodeProblems.csproj",
-        "projectName": "LeetCodeProblems",
-        "projectPath": "C:\\Users\\46790\\Desktop\\LeetCodeProblems\\LeetCodeProblems\\LeetCodeProblems.csproj",
+        "projectUniqueName": "C:\\Users\\46790\\Desktop\\LeetCodeProblems\\RemoveVowel\\RemoveVowel.csproj",
+        "projectName": "RemoveVowel",
+        "projectPath": "C:\\Users\\46790\\Desktop\\LeetCodeProblems\\RemoveVowel\\RemoveVowel.csproj",
         "packagesPath": "C:\\Users\\46790\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\46790\\Desktop\\LeetCodeProblems\\LeetCodeProblems\\obj\\",
+        "outputPath": "C:\\Users\\46790\\Desktop\\LeetCodeProblems\\RemoveVowel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\46790\\AppData\\Roaming\\NuGet\\NuGet.Config",

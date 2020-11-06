@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "RemoveVowel/1.0.0": {
+        "runtime": {
+          "RemoveVowel.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RemoveVowel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

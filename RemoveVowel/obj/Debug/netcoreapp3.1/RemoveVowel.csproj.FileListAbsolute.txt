@@ -1,0 +1,12 @@
+C:\Users\46790\Desktop\LeetCodeProblems\RemoveVowel\bin\Debug\netcoreapp3.1\RemoveVowel.exe
+C:\Users\46790\Desktop\LeetCodeProblems\RemoveVowel\bin\Debug\netcoreapp3.1\RemoveVowel.deps.json
+C:\Users\46790\Desktop\LeetCodeProblems\RemoveVowel\bin\Debug\netcoreapp3.1\RemoveVowel.runtimeconfig.json
+C:\Users\46790\Desktop\LeetCodeProblems\RemoveVowel\bin\Debug\netcoreapp3.1\RemoveVowel.runtimeconfig.dev.json
+C:\Users\46790\Desktop\LeetCodeProblems\RemoveVowel\bin\Debug\netcoreapp3.1\RemoveVowel.dll
+C:\Users\46790\Desktop\LeetCodeProblems\RemoveVowel\bin\Debug\netcoreapp3.1\RemoveVowel.pdb
+C:\Users\46790\Desktop\LeetCodeProblems\RemoveVowel\obj\Debug\netcoreapp3.1\RemoveVowel.AssemblyInfoInputs.cache
+C:\Users\46790\Desktop\LeetCodeProblems\RemoveVowel\obj\Debug\netcoreapp3.1\RemoveVowel.AssemblyInfo.cs
+C:\Users\46790\Desktop\LeetCodeProblems\RemoveVowel\obj\Debug\netcoreapp3.1\RemoveVowel.csproj.CoreCompileInputs.cache
+C:\Users\46790\Desktop\LeetCodeProblems\RemoveVowel\obj\Debug\netcoreapp3.1\RemoveVowel.dll
+C:\Users\46790\Desktop\LeetCodeProblems\RemoveVowel\obj\Debug\netcoreapp3.1\RemoveVowel.pdb
+C:\Users\46790\Desktop\LeetCodeProblems\RemoveVowel\obj\Debug\netcoreapp3.1\RemoveVowel.genruntimeconfig.cache

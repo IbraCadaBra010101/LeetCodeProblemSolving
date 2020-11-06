@@ -11,3 +11,9 @@ C:\Users\46790\Desktop\sigmaKattisTest\LeetCodeProblems\LeetCodeProblems\bin\Deb
 C:\Users\46790\Desktop\sigmaKattisTest\LeetCodeProblems\LeetCodeProblems\obj\Debug\netcoreapp3.1\LeetCodeProblems.dll
 C:\Users\46790\Desktop\sigmaKattisTest\LeetCodeProblems\LeetCodeProblems\obj\Debug\netcoreapp3.1\LeetCodeProblems.pdb
 C:\Users\46790\Desktop\sigmaKattisTest\LeetCodeProblems\LeetCodeProblems\obj\Debug\netcoreapp3.1\LeetCodeProblems.genruntimeconfig.cache
+C:\Users\46790\Desktop\LeetCodeProblems\LeetCodeProblems\obj\Debug\netcoreapp3.1\LeetCodeProblems.csprojAssemblyReference.cache
+C:\Users\46790\Desktop\LeetCodeProblems\LeetCodeProblems\obj\Debug\netcoreapp3.1\LeetCodeProblems.AssemblyInfoInputs.cache
+C:\Users\46790\Desktop\LeetCodeProblems\LeetCodeProblems\obj\Debug\netcoreapp3.1\LeetCodeProblems.AssemblyInfo.cs
+C:\Users\46790\Desktop\LeetCodeProblems\LeetCodeProblems\obj\Debug\netcoreapp3.1\LeetCodeProblems.csproj.CoreCompileInputs.cache
+C:\Users\46790\Desktop\LeetCodeProblems\LeetCodeProblems\obj\Debug\netcoreapp3.1\LeetCodeProblems.dll
+C:\Users\46790\Desktop\LeetCodeProblems\LeetCodeProblems\obj\Debug\netcoreapp3.1\LeetCodeProblems.pdb
