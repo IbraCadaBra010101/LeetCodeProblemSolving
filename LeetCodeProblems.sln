@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeetCodeProblems", "LeetCod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveVowel", "RemoveVowel\RemoveVowel.csproj", "{D1FE07B2-EB13-4E5D-9D54-CBF0CD95B5D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoSum", "TwoSum\TwoSum.csproj", "{3CEB13A2-3FA2-4267-B77C-EF8AB959F657}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D1FE07B2-EB13-4E5D-9D54-CBF0CD95B5D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1FE07B2-EB13-4E5D-9D54-CBF0CD95B5D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1FE07B2-EB13-4E5D-9D54-CBF0CD95B5D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CEB13A2-3FA2-4267-B77C-EF8AB959F657}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CEB13A2-3FA2-4267-B77C-EF8AB959F657}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CEB13A2-3FA2-4267-B77C-EF8AB959F657}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CEB13A2-3FA2-4267-B77C-EF8AB959F657}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

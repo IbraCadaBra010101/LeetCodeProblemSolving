@@ -17,9 +17,9 @@ namespace RemoveVowel
             string[] notAllowedChars = new string[] {"a", "e", "i", "o", "u"};
             if (s.Length >= 1 && s.Length <= 1000)
             {
-                foreach (var a in notAllowedChars)
+                foreach (var letter in notAllowedChars)
                 {
-                   s = s.Replace(a, string.Empty);
+                   s = s.Replace(letter, string.Empty);
                 }
             }
             else
