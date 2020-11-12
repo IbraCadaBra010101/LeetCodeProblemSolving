@@ -8,10 +8,9 @@ namespace TwoSum
     {
         static void Main(string[] args)
         {
-            var res = CountTheDuplicates("ABBA");
-            Console.WriteLine(res);
+            var song = SongDecoder("WUBWUBABCWUB");
+            Console.WriteLine(song);
         }
-
         #region TwoSum
         //public static int[] TwoSum(int[] numArray, int target)
         //{
@@ -28,7 +27,6 @@ namespace TwoSum
 
         //    }
         //    throw new Exception("Invalid input");
-
         //}
 
         #endregion
@@ -48,27 +46,95 @@ namespace TwoSum
         //"ABBA" -> 2 # 'A' and 'B' each occur twice
 
 
-        public static int CountTheDuplicates(string str)
+        //public static int CountTheDuplicates(string str)
+        //{
+        //    Dictionary<char, int> duplicateCounterDictionary = new Dictionary<char, int>();
+        //    int counter = 1;
+        //    var allLowerCaseString = str.ToLower();
+        //    Console.WriteLine(allLowerCaseString);
+        //    for (var i = 0; i < allLowerCaseString.Length; i++)
+        //    {
+        //        if (duplicateCounterDictionary.ContainsKey(allLowerCaseString[i]))
+        //        {
+        //            duplicateCounterDictionary[allLowerCaseString[i]]++;
+        //        }
+        //        else
+        //        {
+        //            duplicateCounterDictionary.Add(allLowerCaseString[i], counter);
+        //        }
+        //    }
+        //    return duplicateCounterDictionary.Count(pair => pair.Value > 1);
+        //}
+        #endregion
+        #region findDiff
+
+
+        //Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
+        //It should remove all values from list a, which are present in list b.
+        //Kata.ArrayDiff(new int[] {1, 2}, new int[] {1}) => new int[] { 2 } 
+        //If a value is present in b, all of its occurrences must be removed from the other:
+        //Kata.ArrayDiff(new int[] { 1, 2, 2, 2, 3 }, new int[] { 2 }) => new int[] { 1, 3 }
+
+        public static int[] ArrayDiff(int[] a, int[] b)
         {
-            Dictionary<char, int> duplicateCounterDictionary = new Dictionary<char, int>();
-            int counter = 1;
-            var allLowerCaseString = str.ToLower();
-            Console.WriteLine(allLowerCaseString);
-            for (var i = 0; i < allLowerCaseString.Length; i++)
+            var makeArrayAList = a.ToList();
+            var makeArrayBList = b.ToList();
+            List<int> newInts = new List<int>();
+            if (makeArrayBList.Count < 1 || makeArrayAList.Count < 1) return makeArrayAList.ToArray();
+
+            for (int i = 0; i < makeArrayAList.Count; i++)
             {
-                if (duplicateCounterDictionary.ContainsKey(allLowerCaseString[i]))
+                for (int j = 0; j < makeArrayBList.Count; j++)
                 {
-                    duplicateCounterDictionary[allLowerCaseString[i]]++;
-                }
-                else
-                {
-                    duplicateCounterDictionary.Add(allLowerCaseString[i], counter);
+                    if (makeArrayBList[j] != makeArrayAList[i])
+                    {
+                        newInts.Add(makeArrayAList[i]);
+                    }
                 }
             }
-            return duplicateCounterDictionary.Count(pair => pair.Value > 1);
+
+            return newInts.ToArray();
+        }
+        #endregion
+        #region faceBookLikes
+        //You probably know the "like" system from Facebook and other pages.People can "like" blog posts,
+        //pictures or other items. We want to create the text that should be displayed next to such an item.
+        //Implement a function likes :: [String] -> String, which must take in input array, 
+        //containing the names of people who like an item.It must return the display text as shown in the examples:
+        //Kata.Likes(new string[0]) => "no one likes this"
+        //Kata.Likes(new string[] {"Peter"}) => "Peter likes this"
+        //Kata.Likes(new string[] {"Jacob", "Alex"}) => "Jacob and Alex like this"
+        //Kata.Likes(new string[] { "Max", "John", "Mark" }) => "Max, John and Mark like this"
+        //Kata.Likes(new string[] { "Alex", "Jacob", "Mark", "Max" }) => "Alex, Jacob and 2 others like this"
+        public static string Likes(string[] name)
+        {
+
+            switch (name.Length)
+            {
+                case 0:
+                    return "no one likes this";
+                case 1:
+                    return $"{name[0]} likes this";
+                case 2:
+                    return $"{name[0]} and {name[1]} like this";
+                case 3:
+                    return $"{name[0]}, {name[1]} and {name[2]} like this"; ;
+                default:
+                    return $"{name[0]}, {name[1]} and {name.Length - 2} others like this";
+            }
         }
         #endregion
 
+        #region songDecoder 
 
+        public static string SongDecoder(string input)
+        {
+            var inputArray = input.Split("WUB");
+            inputArray = inputArray.Where((x) => !string.IsNullOrWhiteSpace(x)).ToArray();
+            var finalStringJoin = string.Join(" ", inputArray);
+            return finalStringJoin;
+        }
+
+        #endregion
     }
 }
