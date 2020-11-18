@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
- 
+using System.Text;
+
 
 namespace TwoSum
 {
@@ -9,77 +10,165 @@ namespace TwoSum
     {
         static void Main(string[] args)
         {
-            var a = TwoSum(new []{ 1,2,3 }, 4);
-            Console.WriteLine(a[0]);
-            Console.WriteLine(a[1]);
-            
+            var resArray = TowerBuilder(3);
+            foreach (var c in resArray)
+            {
+                Console.WriteLine(c);
+
+            }
         }
-            #region TwoSum
+        #region BuildStringTower
+
+
+        public static string[] TowerBuilder(int nFloors)
+        {
+            List<int> list = new List<int>();
+            List<string> eachFloorList = new List<string>();
+            var amount = 1;
+            if (nFloors == 0)
+            {
+                return new string[] { "*" };
+            }
+            for (int i = 0; i < nFloors; i++)
+            {
+                list.Add(amount);
+                amount += 2;
+            }
+            var lengthOfStringElement = list[^1];
+            for (var i = 0; i < nFloors; i++)
+            {
+                var fillWithStars = new string('*', lengthOfStringElement);
+                eachFloorList.Add(fillWithStars);
+
+            }
+            for (var i = 0; i < nFloors; i++)
+            {
+                if (i == (nFloors - 1)) continue;
+
+                var removeSetAmountStarsFromFloor = ((lengthOfStringElement - 1) - i * 2);
+
+                eachFloorList[i] = eachFloorList[i].Remove(0, (removeSetAmountStarsFromFloor / 2));
+
+                eachFloorList[i] = eachFloorList[i].Remove(((eachFloorList[i].Length - 1) - (removeSetAmountStarsFromFloor - 1) / 2));
+                eachFloorList[i] = new string(' ', removeSetAmountStarsFromFloor / 2) + eachFloorList[i];
+                eachFloorList[i] = eachFloorList[i] + new string(' ', removeSetAmountStarsFromFloor / 2);
+            }
+
+            return eachFloorList.ToArray();
+        }
+        //for (var i§ = 0; i <= 10; i++)
+        //{
+        //    if (i % 2 != 0)
+        //    {
+        //        var x = "";
+        //        x += new string ('*', i);
+        //        floorsArray.Add(x);
+
+        //    };
+
+        //}
+        //Build Tower
+        //Build Tower by the following given argument:
+        //number of floors(integer and always greater than 0).
+
+        //Tower block is represented as *
+
+        //Python: return a list;
+        //JavaScript: returns an Array;
+        //C#: returns a string[];
+        //PHP: returns an array;
+        //C++: returns a vector<string>;
+        //Haskell: returns a[String];
+        //Ruby: returns an Array;
+        //Lua: returns a Table;
+        //Have fun!
+
+        //for example, a tower of 3 floors looks like below
+
+        //    [
+        //        '  *  ',
+        //    ' *** ',
+        //    '*****'
+        //    ]
+        //and a tower of 6 floors looks like below
+
+        //    [
+        //        '     *     ',
+        //    '    ***    ',
+        //    '   *****   ',
+        //    '  *******  ',
+        //    ' ********* ',
+        //    '***********'
+        //    ]
+
+        #endregion
+
+        #region TwoSum
         //public static int[] TwoSum(int[] numArray, int target)
         //{
-//        Dictionary<int, int> previousNumber = new Dictionary<int, int>();
-//            for (int i = 0; i<numArray.Length; i++)
-//            {
-//                var currentNumberInArray = numArray[i];
-//        var complement = target - currentNumberInArray;
-//                if (previousNumber.ContainsKey(complement))
-//                {
-//                    return new[] { previousNumber[complement], i
-//    };
-//}
-//previousNumber.Add(numArray[i], i);
+        //        Dictionary<int, int> previousNumber = new Dictionary<int, int>();
+        //            for (int i = 0; i<numArray.Length; i++)
+        //            {
+        //                var currentNumberInArray = numArray[i];
+        //        var complement = target - currentNumberInArray;
+        //                if (previousNumber.ContainsKey(complement))
+        //                {
+        //                    return new[] { previousNumber[complement], i
+        //    };
+        //}
+        //previousNumber.Add(numArray[i], i);
 
-//            }
-//            throw new Exception("Invalid input");
-//}
+        //            }
+        //            throw new Exception("Invalid input");
+        //}
 
-#endregion
-         #region CountTheDuplicates
-    //    Count the number of Duplicates 
-    //    Write a function that will return the count of distinct case-insensitive alphabetic characters
-    //    and numeric digits that occur more than once in the input string. The input string can be 
-    //    assumed to contain only alphabets(both uppercase and lowercase) and numeric digits.
+        #endregion
+        #region CountTheDuplicates
+        //    Count the number of Duplicates 
+        //    Write a function that will return the count of distinct case-insensitive alphabetic characters
+        //    and numeric digits that occur more than once in the input string. The input string can be 
+        //    assumed to contain only alphabets(both uppercase and lowercase) and numeric digits.
 
-    //  Example
-    //"abcde" -> 0 # no characters repeats more than once
-    //"aabbcde" -> 2 # 'a' and 'b'
-    //"aabBcde" -> 2 # 'a' occurs twice and 'b' twice (`b` and `B`)
-    //"indivisibility" -> 1 # 'i' occurs six times
-    //"Indivisibilities" -> 2 # 'i' occurs seven times and 's' occurs twice
-    //"aA11" -> 2 # 'a' and '1'
-    //"ABBA" -> 2 # 'A' and 'B' each occur twice
+        //  Example
+        //"abcde" -> 0 # no characters repeats more than once
+        //"aabbcde" -> 2 # 'a' and 'b'
+        //"aabBcde" -> 2 # 'a' occurs twice and 'b' twice (`b` and `B`)
+        //"indivisibility" -> 1 # 'i' occurs six times
+        //"Indivisibilities" -> 2 # 'i' occurs seven times and 's' occurs twice
+        //"aA11" -> 2 # 'a' and '1'
+        //"ABBA" -> 2 # 'A' and 'B' each occur twice
 
 
-    //public static int CountTheDuplicates(string str)
-    //{
-    //    Dictionary<char, int> duplicateCounterDictionary = new Dictionary<char, int>();
-    //    int counter = 1;
-    //    var allLowerCaseString = str.ToLower();
-    //    Console.WriteLine(allLowerCaseString);
-    //    for (var i = 0; i < allLowerCaseString.Length; i++)
-    //    {
-    //        if (duplicateCounterDictionary.ContainsKey(allLowerCaseString[i]))
-    //        {
-    //            duplicateCounterDictionary[allLowerCaseString[i]]++;
-    //        }
-    //        else
-    //        {
-    //            duplicateCounterDictionary.Add(allLowerCaseString[i], counter);
-    //        }
-    //    }
-    //    return duplicateCounterDictionary.Count(pair => pair.Value > 1);
-    //}
-    #endregion
+        //public static int CountTheDuplicates(string str)
+        //{
+        //    Dictionary<char, int> duplicateCounterDictionary = new Dictionary<char, int>();
+        //    int counter = 1;
+        //    var allLowerCaseString = str.ToLower();
+        //    Console.WriteLine(allLowerCaseString);
+        //    for (var i = 0; i < allLowerCaseString.Length; i++)
+        //    {
+        //        if (duplicateCounterDictionary.ContainsKey(allLowerCaseString[i]))
+        //        {
+        //            duplicateCounterDictionary[allLowerCaseString[i]]++;
+        //        }
+        //        else
+        //        {
+        //            duplicateCounterDictionary.Add(allLowerCaseString[i], counter);
+        //        }
+        //    }
+        //    return duplicateCounterDictionary.Count(pair => pair.Value > 1);
+        //}
+        #endregion
         #region findDiff
 
 
-//Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
-//It should remove all values from list a, which are present in list b.
-//Kata.ArrayDiff(new int[] {1, 2}, new int[] {1}) => new int[] { 2 } 
-//If a value is present in b, all of its occurrences must be removed from the other:
-//Kata.ArrayDiff(new int[] { 1, 2, 2, 2, 3 }, new int[] { 2 }) => new int[] { 1, 3 }
+        //Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
+        //It should remove all values from list a, which are present in list b.
+        //Kata.ArrayDiff(new int[] {1, 2}, new int[] {1}) => new int[] { 2 } 
+        //If a value is present in b, all of its occurrences must be removed from the other:
+        //Kata.ArrayDiff(new int[] { 1, 2, 2, 2, 3 }, new int[] { 2 }) => new int[] { 1, 3 }
 
-public static int[] ArrayDiff(int[] a, int[] b)
+        public static int[] ArrayDiff(int[] a, int[] b)
         {
             var makeArrayAList = a.ToList();
             var makeArrayBList = b.ToList();
@@ -226,7 +315,6 @@ public static int[] ArrayDiff(int[] a, int[] b)
 
         //                   var res = BouncingBall(3, 0.66, 1.5);
         #endregion
-
         #region TwoSum
 
         //Write a function that takes an array of numbers(integers for the tests) and a target number.
@@ -238,28 +326,29 @@ public static int[] ArrayDiff(int[] a, int[] b)
         //be numbers; target will always be the sum of two different items from that array).
         //Based on: http://oj.leetcode.com/problems/two-sum/
 
-        public static int[] TwoSum(int[] numbers, int target)
-        {
-            var previousNumbers = new Dictionary<int, int>();
-             for (var i = 0; i < numbers.Length; i++)
-            {
-                var difference = target - numbers[i];
+        //public static int[] TwoSum(int[] numbers, int target)
+        //{
+        //    var previousNumbers = new Dictionary<int, int>();
+        //     for (var i = 0; i < numbers.Length; i++)
+        //    {
+        //        var difference = target - numbers[i];
 
-                if (previousNumbers.ContainsKey(difference))
-                {
-                    return new[] { i, previousNumbers[difference] };
-                }
+        //        if (previousNumbers.ContainsKey(difference))
+        //        {
+        //            return new[] { i, previousNumbers[difference] };
+        //        }
 
-                if (!previousNumbers.ContainsKey(numbers[i]))
-                {
-                    previousNumbers.Add(numbers[i], i);
-                }
-            }
-            return new int[0];
-        }
+        //        if (!previousNumbers.ContainsKey(numbers[i]))
+        //        {
+        //            previousNumbers.Add(numbers[i], i);
+        //        }
+        //    }
+        //    return new int[0];
+        //}
 
 
 
         #endregion
+
     }
 }
